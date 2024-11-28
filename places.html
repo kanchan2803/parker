@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parker - Places</title>
+    <link rel="stylesheet" href="places.css">
+</head>
+<body>
+<!-- Navigation bar -->
+<nav>
+    <!-- Header with Title -->
+    <header>
+    <h1><img src="https://img.freepik.com/free-vector/p-gradient-creative-logo-design-vector_474888-3916.jpg?ga=GA1.1.1652129974.1675092899&semt=ais_hybrid"alt="Image " class="logo-img"></h1>
+    
+    </header>
+    
+    
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="places.html">Places</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="about.html">About Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Search bar with filters -->
+    <section class="search-section">
+        <input type="text" id="search-bar" placeholder="Search for a place...">
+        <select id="data-zone">
+            <option value="">Filter by Zone</option>
+            <option value="Zone 1">Zone 1</option>
+            <option value="Zone 2">Zone 2</option>
+            <option value="Zone 3">Zone 3</option>
+            <option value="Zone 2">Zone 4</option>
+            <option value="Zone 3">Zone 5</option>
+        </select>
+        <select id="data-vehicle">
+            <option value="">Filter by Vehicle Type</option>
+            <option value="Car">Cars</option>
+            <option value="Bike">Bikes</option>
+            <option value="Truck">Trucks</option>
+        </select>
+        <button onclick="filterPlaces()">Search</button>
+    </section>
+    
+    <!-- List of Places -->
+<section id="places-list">
+
+    <div class="place-item" data-zone="Zone 1" data-vehicle="Cars">
+        <h2>DB Mall</h2>
+        <p><strong>Zone:</strong> Zone 1</p>
+        <p><strong>Address:</strong> Maharana Pratap Nagar, Bhopal</p>
+        <p><strong>Status:</strong> Open</p>
+        <p><strong>Parking Slots:</strong> Ground Floor, Basement</p>
+        <p><strong>Contact:</strong> +91 1010101010</p>
+        <p><strong>Fares:</strong> ₹50/hour for cars</p>
+        <p><strong>Vehicles:</strong> Cars</p>
+        <p><strong>Vacant Slots:</strong> <span class="vacant-slots">15</span></p>
+        <button onclick="window.location.href='booking-page1.html'">Book Slot</button>
+    </div>
+
+    <div class="place-item" data-zone="Zone 2" data-vehicle="Bikes">
+        <h2>Aura Mall</h2>
+        <p><strong>Zone:</strong> Zone 2</p>
+        <p><strong>Address:</strong> Arera Colony, Bhopal</p>
+        <p><strong>Status:</strong> Open</p>
+        <p><strong>Parking Slots:</strong> Ground Floor, Basement 1, Basement 2</p>
+        <p><strong>Contact:</strong> +91 2020202020</p>
+        <p><strong>Fares:</strong> ₹15/hour for bikes</p>
+        <p><strong>Vehicles:</strong> Bikes</p>
+        <p><strong>Vacant Slots:</strong> <span class="vacant-slots">10</span></p>
+        <button onclick="window.location.href='booking-page2.html'">Book Slot</button>
+    </div>
+
+    <div class="place-item" data-zone="Zone 3" data-vehicle="Bikes">
+        <h2>People’s Mall</h2>
+        <p><strong>Zone:</strong> Zone 3</p>
+        <p><strong>Address:</strong> Ayodhya Bypass Road, Bhopal</p>
+        <p><strong>Status:</strong> Open</p>
+        <p><strong>Parking Slots:</strong> Ground Floor, Open Parking</p>
+        <p><strong>Contact:</strong> +91 3030303030</p>
+        <p><strong>Fares:</strong> ₹10/hour for bikes</p>
+        <p><strong>Vehicles:</strong> Bikes</p>
+        <p><strong>Vacant Slots:</strong> <span class="vacant-slots">20</span></p>
+        <button onclick="window.location.href='booking-page3.html'">Book Slot</button>
+    </div>
+
+    <div class="place-item" data-zone="Zone 4" data-vehicle="Trucks">
+        <h2>Aashima Mall</h2>
+        <p><strong>Zone:</strong> Zone 4</p>
+        <p><strong>Address:</strong> Hoshangabad Road, Bhopal</p>
+        <p><strong>Status:</strong> Open</p>
+        <p><strong>Parking Slots:</strong> Ground Floor, Basement, Roof Parking</p>
+        <p><strong>Contact:</strong> +91 4040404040</p>
+        <p><strong>Fares:</strong> ₹100/hour for trucks</p>
+        <p><strong>Vehicles:</strong> Trucks</p>
+        <p><strong>Vacant Slots:</strong> <span class="vacant-slots">8</span></p>
+        <button onclick="window.location.href='booking-page4.html'">Book Slot</button>
+    </div>
+
+    <div class="place-item" data-zone="Zone 5" data-vehicle="Cars">
+        <h2>Vardhman Mall</h2>
+        <p><strong>Zone:</strong> Zone 5</p>
+        <p><strong>Address:</strong> Bairagarh, Bhopal</p>
+        <p><strong>Status:</strong> Open</p>
+        <p><strong>Parking Slots:</strong> Ground Floor, Basement</p>
+        <p><strong>Contact:</strong> +91 5050505050</p>
+        <p><strong>Fares:</strong> ₹45/hour for cars</p>
+        <p><strong>Vehicles:</strong> Cars</p>
+        <p><strong>Vacant Slots:</strong> <span class="vacant-slots">5</span></p>
+        <button onclick="window.location.href='booking-page5.html'">Book Slot</button>
+    </div>
+
+    <div class="place-item" data-zone="Zone 2" data-vehicle="Bikes">
+        <h2>Capital Mall</h2>
+        <p><strong>Zone:</strong> Zone 2</p>
+        <p><strong>Address:</strong> Hoshangabad Road, Bhopal</p>
+        <p><strong>Status:</strong> Open</p>
+        <p><strong>Parking Slots:</strong> Ground Floor, Basement</p>
+        <p><strong>Contact:</strong> +91 6060606060</p>
+        <p><strong>Fares:</strong> ₹20/hour for bikes</p>
+        <p><strong>Vehicles:</strong> Bikes</p>
+        <p><strong>Vacant Slots:</strong> <span class="vacant-slots">12</span></p>
+        <button onclick="window.location.href='booking-page6.html'">Book Slot</button>
+    </div>
+
+    <div class="place-item" data-zone="Zone 5" data-vehicle="Cars">
+        <h2>Century 21 Mall</h2>
+        <p><strong>Zone:</strong> Zone 5</p>
+        <p><strong>Address:</strong> Misrod, Bhopal</p>
+        <p><strong>Status:</strong> Open</p>
+        <p><strong>Parking Slots:</strong> Ground Floor, Basement, Roof Parking</p>
+        <p><strong>Contact:</strong> +91 7070707070</p>
+        <p><strong>Fares:</strong> ₹55/hour for cars</p>
+        <p><strong>Vehicles:</strong> Cars</p>
+        <p><strong>Vacant Slots:</strong> <span class="vacant-slots">7</span></p>
+        <button onclick="window.location.href='booking-page7.html'">Book Slot</button>
+    </div>
+
+    <div class="place-item" data-zone="Zone 1" data-vehicle="Cars">
+        <h2>C21 Mall</h2>
+        <p><strong>Zone:</strong> Zone 1</p>
+        <p><strong>Address:</strong> Maharana Pratap Nagar, Bhopal</p>
+        <p><strong>Status:</strong> Open</p>
+        <p><strong>Parking Slots:</strong> Ground Floor, Basement</p>
+        <p><strong>Contact:</strong> +91 8080808080</p>
+        <p><strong>Fares:</strong> ₹50/hour for cars</p>
+        <p><strong>Vehicles:</strong> Cars</p>
+        <p><strong>Vacant Slots:</strong> <span class="vacant-slots">15</span></p>
+        <button onclick="window.location.href='booking-page8.html'">Book Slot</button>
+    </div>
+
+    <div class="place-item" data-zone="Zone 3" data-vehicle="Trucks">
+        <h2>The Lake View Mall</h2>
+        <p><strong>Zone:</strong> Zone 3</p>
+        <p><strong>Address:</strong> Shyamla Hills, Bhopal</p>
+        <p><strong>Status:</strong> Open</p>
+        <p><strong>Parking Slots:</strong> Ground Floor, Open Parking</p>
+        <p><strong>Contact:</strong> +91 9090909090</p>
+        <p><strong>Fares:</strong> ₹95/hour for trucks</p>
+        <p><strong>Vehicles:</strong> Trucks</p>
+        <p><strong>Vacant Slots:</strong> <span class="vacant-slots">10</span></p>
+        <button onclick="window.location.href='booking-page9.html'">Book Slot</button>
+    </div>
+
+    <div class="place-item" data-zone="Zone 4" data-vehicle="Cars">
+        <h2>Mansarovar Complex</h2>
+        <p><strong>Zone:</strong> Zone 4</p>
+        <p><strong>Address:</strong> Habibganj, Bhopal</p>
+        <p><strong>Status:</strong> Open</p>
+        <p><strong>Parking Slots:</strong> Ground Floor, Open Parking</p>
+        <p><strong>Contact:</strong> +91 1100110011</p>
+        <p><strong>Fares:</strong> ₹30/hour for cars</p>
+        <p><strong>Vehicles:</strong> Cars</p>
+        <p><strong>Vacant Slots:</strong> <span class="vacant-slots">18</span></p>
+        <button onclick="window.location.href='booking-page10.html'">Book Slot</button>
+    </div>
+
+</section>
+        
+
+
+    
+
+    
+
+</body>
+</html>
+   
+</body>
+</html>
+
+    <script src="places.js"></script>
+</body>
+</html>

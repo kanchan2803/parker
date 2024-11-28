@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parker - Login</title>
+    <link rel="stylesheet" href="login.css">
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+</head>
+<body>
+    <!-- Navigation bar -->
+    <nav>
+    <!-- Header with Title -->
+    <header>
+        <h1><img src="https://img.freepik.com/free-vector/p-gradient-creative-logo-design-vector_474888-3916.jpg?ga=GA1.1.1652129974.1675092899&semt=ais_hybrid"alt="Image " class="logo-img"></h1>
+    
+    </header>
+    
+    
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="signup.html">Signup</a></li>
+            <li><a href="index.html">Back</a></li>
+            
+        </ul>
+    </nav>
+
+    <!-- Login Form Section -->
+    <div class="login-container">
+        <div class="login-box">
+            <h1>Sign In</h1>
+            <p>to continue to Parker</p>
+
+            <form id="login-form" onsubmit="validateForm(event)">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required placeholder="Enter your email">
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required placeholder="Enter your password">
+
+                <button type="submit">Next</button>
+            </form>
+
+            <div class="additional-options">
+                <a href="#">Forgot Password?</a> | 
+                <a href="signup.html">Create Account</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="login.js"></script>
+
+</body>
+</html>

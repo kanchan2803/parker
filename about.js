@@ -1,0 +1,1 @@
+// JavaScript is optional for the About Us page. You can add interactivity if needed.
